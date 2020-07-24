@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdaptor extends RecyclerView.Adapter<MyViewHodler> {
+public class MyAdaptor extends RecyclerView.Adapter<MyViewHolder> {
 
     private ArrayList<Data> data;
 
@@ -17,17 +17,27 @@ public class MyAdaptor extends RecyclerView.Adapter<MyViewHodler> {
         this.data = data;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return this.data.get(position).type.type;
+    }
+
     @NonNull
     @Override
-    public MyViewHodler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if (Data.DataType.Header.type == viewType) {
+            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item_header, parent, false);
+            return new HeaderViewHolder(itemView);
+        } else {
+            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item, parent, false);
+            return new DataViewHolder(itemView);
+        }
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item, parent, false);
-        return new MyViewHodler(itemView);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHodler holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Data data = this.data.get(position);
         holder.setData(data);
     }

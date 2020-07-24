@@ -35,25 +35,26 @@ public class ContentActivity extends AppCompatActivity {
     }
 
     private void createData() {
-        this.data.add(new Data("title1", "desp1", 1));
-        this.data.add(new Data("title2", "desp2", 2));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
-        this.data.add(new Data("title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Header, "here is title", null, 0));
+        this.data.add(new Data(Data.DataType.Data ,"title1", "desp1", 1));
+        this.data.add(new Data(Data.DataType.Data ,"title2", "desp2", 2));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
+        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
 
     }
 }

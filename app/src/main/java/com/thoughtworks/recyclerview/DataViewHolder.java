@@ -4,16 +4,14 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
-public class MyViewHodler extends RecyclerView.ViewHolder {
-
+public class DataViewHolder extends MyViewHolder {
 
     private final TextView title;
     private final TextView number;
     private final TextView description;
 
-    public MyViewHodler(@NonNull View itemView) {
+    public DataViewHolder(@NonNull View itemView) {
         super(itemView);
         this.number = itemView.findViewById(R.id.item_number);
         this.title = itemView.findViewById(R.id.item_title);
