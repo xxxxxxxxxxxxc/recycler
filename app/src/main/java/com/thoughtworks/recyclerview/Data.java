@@ -2,15 +2,17 @@ package com.thoughtworks.recyclerview;
 
 public class Data {
     DataType type;
-    public String title;
-    public String description;
-    public int number;
+    String title;
+    String description;
+    int number;
+    String avatar;
 
-    public Data(DataType type, String title, String description, int number) {
+    public Data(DataType type, String title, String description, String avatar, int number) {
         this.type = type;
         this.title = title;
         this.description = description;
         this.number = number;
+        this.avatar = avatar;
     }
 
 

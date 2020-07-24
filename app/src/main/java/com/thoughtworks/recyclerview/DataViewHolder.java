@@ -1,21 +1,26 @@
 package com.thoughtworks.recyclerview;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.bumptech.glide.Glide;
 
 public class DataViewHolder extends MyViewHolder {
 
     private final TextView title;
     private final TextView number;
     private final TextView description;
+    private final ImageView avatar;
 
     public DataViewHolder(@NonNull View itemView) {
         super(itemView);
         this.number = itemView.findViewById(R.id.item_number);
         this.title = itemView.findViewById(R.id.item_title);
         this.description = itemView.findViewById(R.id.item_description);
+        this.avatar = itemView.findViewById(R.id.item_avatar);
 
     }
 
@@ -24,6 +29,7 @@ public class DataViewHolder extends MyViewHolder {
         this.number.setText(String.valueOf(data.number));
         this.title.setText(data.title);
         this.description.setText(data.description);
+        Glide.with(itemView).load(data.avatar).into(this.avatar);
     }
 
 }

@@ -35,27 +35,16 @@ public class ContentActivity extends AppCompatActivity {
     }
 
     private void createData() {
-        this.data.add(new Data(Data.DataType.Header, "here is title", null, 0));
-        this.data.add(new Data(Data.DataType.Data ,"title1", "desp1", 1));
-        this.data.add(new Data(Data.DataType.Data ,"title2", "desp2", 2));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-        this.data.add(new Data(Data.DataType.Data ,"title3", "desp3", 3));
-
+        this.data.add(new Data(Data.DataType.Header, "here is title", null, null, 0));
+        for (int i = 0; i < 100; i++) {
+            this.data.add(new Data(
+                    Data.DataType.Data,
+                    String.format("title %s", i),
+                    String.format("description blablabla %s", i),
+                    String.format("https://loremflickr.com/180/180?lock=%s", i),
+                    i
+            ));
+        }
     }
 }
 
