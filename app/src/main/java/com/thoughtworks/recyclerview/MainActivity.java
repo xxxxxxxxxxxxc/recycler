@@ -10,8 +10,15 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @OnClick(R.id.to_recycler_view) void click() {
+    @OnClick(R.id.to_recycler_view)
+    void click() {
         Intent intent = new Intent(this, ContentActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.to_thread)
+    void threadClick() {
+        Intent intent = new Intent(this, ThreadActivity.class);
         startActivity(intent);
     }
 
