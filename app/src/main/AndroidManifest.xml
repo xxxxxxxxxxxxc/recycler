@@ -33,9 +33,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ThreadActivity" android:label="@string/thread_header">
+        <activity
+            android:name=".ThreadActivity"
+            android:label="@string/thread_header">
 
         </activity>
+        <activity
+            android:name=".RxJavaActivity"
+            android:label="@string/to_rxjava" />
     </application>
 
 </manifest>

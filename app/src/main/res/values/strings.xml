@@ -10,4 +10,5 @@
     <string name="to_thread">To Thread</string>
     <string name="thread_header">Thread</string>
     <string name="click_me">Click Me</string>
+    <string name="to_rxjava">To RxJava</string>
 </resources>
