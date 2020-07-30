@@ -26,6 +26,9 @@ public class RxJavaActivity extends AppCompatActivity {
                     SystemClock.sleep(1000);
                     return v;
                 })
+                .doOnSubscribe((v) -> {
+                    button.setClickable(false);
+                })
                 .doOnComplete(() -> {
                     SystemClock.sleep(1000);
                 })
@@ -38,6 +41,7 @@ public class RxJavaActivity extends AppCompatActivity {
                 }, x -> {
                 }, () -> {
                     button.setText("Done");
+                    button.setClickable(true);
                 });
     }
 
